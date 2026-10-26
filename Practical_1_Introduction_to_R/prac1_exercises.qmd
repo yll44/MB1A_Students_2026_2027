@@ -1,0 +1,52 @@
+---
+title: "prac1_exercises"
+format: html
+---
+
+```{r}
+round(3.14159)
+```
+```{r}
+round(3.14159, digits = 2)
+```
+```{r}
+seq(1,18,2)
+```
+Exercise: rep()
+```{r}
+rep(5, 7)
+```
+```{r}
+rep(x = 5, times = 7)
+```
+
+```{r}
+x <- 114514
+print(class(x))
+```
+```{r}
+y <- "DNA"
+print(class(y))
+```
+```{r}
+z <- TRUE
+print(class(z))
+```
+
+Radiation
+```{r}
+cell_ID_1 <- "CX1"
+cell_ID_2 <- "CX2"
+
+treated_1 <- TRUE
+treated_2 <- FALSE
+
+num_cells_before_1 <- 5415
+num_cells_before_2 <- 8123
+
+num_cells_after_1 <- 1432
+num_cells_after_2 <- 7543
+
+
+```
+
