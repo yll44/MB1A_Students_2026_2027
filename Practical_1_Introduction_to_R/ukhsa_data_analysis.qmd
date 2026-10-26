@@ -1,0 +1,40 @@
+---
+title: "Practical_1_Introduction_to_R/ukhsa_data_analysis"
+author: "Joel"
+format: html
+---
+
+```{r}
+library(tidyverse)
+library(gt)
+```
+
+```{r}
+rhinovirus <- read_csv("data/ukhsa-chart-download-rhinovirus.csv")
+
+gt(head(rhinovirus))
+```
+
+Antibiotics 
+
+```{r}
+
+antibiotics <- read_csv("data/ukhsa-chart-download.csv")
+
+ggplot( antibiotics, aes(
+  x = date,
+  y = metric_value
+  
+)) + geom_line(colour = "red") +
+   xlab("Year") +
+   ylab("Antibiotic use by month") +
+  ggtitle("Rate of total antibiotic consumption")
+  
+  
+  
+
+
+
+```
+
+

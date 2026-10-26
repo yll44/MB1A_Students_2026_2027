@@ -2,6 +2,11 @@
 title: "prac1_exercises"
 format: html
 ---
+```{r}
+library(tidyverse)
+library(gt)
+```
+
 
 ```{r}
 round(3.14159)
@@ -31,6 +36,8 @@ print(class(y))
 ```{r}
 z <- TRUE
 print(class(z))
+
+
 ```
 
 Radiation
@@ -47,6 +54,52 @@ num_cells_before_2 <- 8123
 num_cells_after_1 <- 1432
 num_cells_after_2 <- 7543
 
+cell_ID_vec <- c(cell_ID_1, cell_ID_2)
+print(cell_ID_vec)
+
+treated_vec <- c(treated_1, treated_2)
+print(treated_vec)
+
+num_cells_before_vec <- c(num_cells_before_1, num_cells_before_2)
+print(num_cells_before_vec)
+
+num_cells_after_vec <- c(num_cells_after_1, num_cells_after_2)
+print(num_cells_after_vec)
+
+radiation_data_frame <- tibble(
+  cell_ID = cell_ID_vec
+  treated = treated_vec
+  num_cells_before = num_cells_before_vec
+  num_cells_after = num_cells_after_vec
+)
+  gt(radiation_data_frame)
+  
+```
+
+
+```{r}
+all_my_pets <- c("dog", "horse", "guinea pig", "chicken", "cat")
+
+chicken_wing <- all_my_pets[4]
+print(chicken_wing)
+```
+
+
+```{r}
+radiation_data_frame <- tibble(
+  cell_ID = cell_ID_vec,
+  treated = treated_vec,
+  num_cells_before = num_cells_before_vec,
+  num_cells_after = num_cells_after_vec
+)
+  gt(radiation_data_frame)
+  
 
 ```
+
+```{r}
+weather <- read_csv("data/weather_data.csv")
+gt(weather)
+```
+
 
